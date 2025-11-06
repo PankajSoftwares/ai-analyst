@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>AI Analyst</title></head>
+<body>
+  <h1>AI Analyst for Startup Evaluation</h1>
+  <input type="file" id="fileInput" accept=".txt,.pdf,.zip" />
+  <p>Upload a .txt file, .pdf file, or .zip folder containing company data.</p>
+  <button onclick="upload()">Analyze</button>
+  <pre id="result"></pre>
+
+  <script>
+    async function upload(){
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+      if (!file) {
+        alert('Please select a file first.');
+        return;
+      }
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const res = await fetch('http://localhost:8080/analyze', {
+        method: 'POST',
+        body: formData
+      });
+      const json = await res.json();
+      document.getElementById('result').textContent = JSON.stringify(json, null, 2);
+    }
+  </script>
+</body>
+</html>

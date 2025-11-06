@@ -1,0 +1,1 @@
+Sample pitch deck text for Acme Health startup. Startup Name: Acme Health. Founders: John Doe (CEO), Jane Smith (CTO). Ask: 2M for product development. Stage: Seed. Traction: 12K MRR, 500 users, 20% growth. Metrics: CAC 800, LTV 6000, Churn 5%. Business Model: SaaS for clinics. TAM: 2.5B. Competition: Low. IP: Proprietary algorithms. Notes: Promising but small customer base.
